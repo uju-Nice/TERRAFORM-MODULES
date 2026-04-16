@@ -1,9 +1,9 @@
 output "bucket_id" {
-    description = ""
-    value = ""
+    description = "The ID of the S3 bucket"
+    value = aws_s3_bucket.nickos_bucket.id
 }
 
 output "bucket_arn" {
-    description = ""
-    value = " "
+    description = "The ARN of the S3 bucket"
+    value = aws_s3_bucket.nickos_bucket.arn
 }

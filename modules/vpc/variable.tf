@@ -1,7 +1,20 @@
-variable "cidr_block" {}
+variable "cidr_block" {
+    type = string
+      description = "CIDR block for VPC" 
+}
 
-variable "public_subnet_cidrs" {}
+variable "public_subnet_cidrs" {
+    type = list(string)
+    
 
-variable "private_subnet_cidrs" {}
 
-variable "availability_zones" {}
+}
+
+variable "private_subnet_cidrs" {
+    type = list(string)         
+
+}
+
+variable "availability_zones" {
+    type = list(string)
+}
