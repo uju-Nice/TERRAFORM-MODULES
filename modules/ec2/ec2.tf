@@ -1,7 +1,6 @@
 resource "aws_instance" "nickos-ec2" {
-    ami = "ami-123456"
-    instance_type = "t2.micro"
-    
+    instance_type = var.instance_type
+    ami = var.ami
      user_data = <<-EOF
               #!/bin/bash
               yum update -y
@@ -38,3 +37,4 @@ resource "aws_security_group" "nickos-ssh" {
     }
 
 }
+

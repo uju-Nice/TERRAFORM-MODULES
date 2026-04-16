@@ -5,16 +5,15 @@ variable "cidr_block" {
 
 variable "public_subnet_cidrs" {
     type = list(string)
-    
-
-
+    description = "cidr range for public subnets"
 }
 
 variable "private_subnet_cidrs" {
-    type = list(string)         
-
+    type = list(string)
+    description = "cidr range for private subnets"
 }
 
 variable "availability_zones" {
     type = list(string)
+    description = "Availability zones for the VPC"
 }

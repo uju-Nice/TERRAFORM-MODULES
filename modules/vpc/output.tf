@@ -6,7 +6,6 @@ output "vpc_id" {
 output "public_subnets" {
     description = "Public subnet"
     value = "${aws_subnet.public.*.id}"
-
 }
 
 output "private_subnets" {
