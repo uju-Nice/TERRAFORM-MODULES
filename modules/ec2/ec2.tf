@@ -4,12 +4,13 @@ resource "aws_instance" "nickos-ec2" {
      user_data = <<-EOF
               #!/bin/bash
               yum update -y
-              sudo dnf install -y mariadb105
-              echo "MySQL client installed successfully!" > /home/ec2-user/mysql-installed.log
+              sudo apt update -y
+              sudo apt install -y wget
+              echo "wget package installed successfully!" > /home/ec2-user/wget-installed.log
             EOF
 
       tags = {
-            Name = "nickos-ec2-instance"     
+            Name = "nickos-web-server"     
 }
 }
 
