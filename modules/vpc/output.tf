@@ -5,11 +5,10 @@ output "vpc_id" {
 
 output "public_subnets" {
     description = "Public subnet"
-    value = 
-
+    value = "${aws_subnet.public.*.id}"
 }
 
 output "private_subnets" {
-    description = "Public IP of the EC2 instance"
-    value = 
+    description = "Private subnet"
+    value = "${aws_subnet.private.*.id}"
 }
